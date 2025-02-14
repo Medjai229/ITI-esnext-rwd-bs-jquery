@@ -1,3 +1,3 @@
-# ITI Advanced JS & ES Next
+# ITI ES Next & RWD-BS & JQuery
 
-**This repo contains advanced javascript and es next lab solutions**
+**This repo contains es next and rwd bootstrap and jquery lab solutions**
