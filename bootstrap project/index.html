@@ -1,0 +1,1234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Clone using BS</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <style>
+      .square-image {
+        width: 100%;
+        padding-top: 100%;
+        position: relative;
+      }
+
+      .square-image img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- * Nav Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid px-5">
+        <a class="navbar-brand me-5" href="#"
+          ><i class="bi bi-amazon h2"></i
+        ></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <form class="d-flex col-4 me-auto border rounded" role="search">
+            <input
+              class="form-control border-0"
+              type="search"
+              placeholder="Search amazon..."
+              aria-label="Search"
+            />
+            <button class="btn btn-warning" type="submit">
+              <i class="bi bi-search"></i>
+            </button>
+          </form>
+          <ul class="navbar-nav mb-2 mb-lg-0">
+            <li class="nav-item mx-1">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="#">Orders</a>
+            </li>
+            <li class="nav-item dropdown mx-1">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Categories
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Mobile Phones</a></li>
+                <li><a class="dropdown-item" href="#">Men's Clothing</a></li>
+                <li><a class="dropdown-item" href="#">Women's Clothing</a></li>
+                <li><a class="dropdown-item" href="#">Footwear</a></li>
+                <li><a class="dropdown-item" href="#">Furniture</a></li>
+                <li><a class="dropdown-item" href="#">Fitness Equipment</a></li>
+                <li><a class="dropdown-item" href="#">Home Appliances</a></li>
+              </ul>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="#"
+                ><i class="bi bi-cart h5 position-relative">
+                  <span
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger h6"
+                    style="font-size: 0.6rem"
+                  >
+                    5
+                    <span class="visually-hidden">unread messages</span>
+                  </span>
+                </i>
+              </a>
+            </li>
+            <li class="nav-item mx-1">
+              <a class="nav-link" href="#">
+                <i class="bi bi-box-arrow-right h5"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- * Carousel -->
+
+    <div
+      id="carouselExampleInterval"
+      class="carousel slide"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="4000">
+          <img src="./images/header/1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./images/header/2.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./images/header/3.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./images/header/4.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./images/header/5.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./images/header/6.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="4000">
+          <img src="./images/header/7.jpg" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carouselExampleInterval"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- * Cards -->
+
+    <div
+      class="container d-flex flex-column flex-md-row flex-wrap justify-content-around align-items-center gap-3 my-4"
+    >
+      <div class="card col-6 col-md-5 col-lg-3">
+        <img src="./images/cards/card1.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Enjoy Prime with us</h5>
+          <a href="#" class="text-primary text-decoration-none">Redeem now</a>
+        </div>
+      </div>
+      <div class="card col-6 col-md-5 col-lg-3">
+        <img src="./images/cards/card2.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">New Year Sale | Up to 25% off</h5>
+          <a href="#" class="text-primary text-decoration-none">See more</a>
+        </div>
+      </div>
+      <div class="card col-6 col-md-5 col-lg-3">
+        <img src="./images/cards/card3.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Last Chance | Fashion</h5>
+          <a href="#" class="text-primary text-decoration-none">See more</a>
+        </div>
+      </div>
+      <div class="card d-none d-md-block col-md-5 col-lg-3">
+        <img src="./images/cards/card4.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Gaming & accessories</h5>
+          <a href="#" class="text-primary text-decoration-none">Shop now</a>
+        </div>
+      </div>
+      <div class="card d-none d-md-block col-md-5 col-lg-3">
+        <img src="./images/cards/card5.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Musical Instruments</h5>
+          <a href="#" class="text-primary text-decoration-none">Shop now</a>
+        </div>
+      </div>
+      <div class="card d-none d-md-block col-md-5 col-lg-3">
+        <img src="./images/cards/card6.jpg" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Car essentials</h5>
+          <a href="#" class="text-primary text-decoration-none">Shop now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- * Budget Zone Carsoul -->
+
+    <div class="container border my-4">
+      <h4 class="card-title my-3 mx-3 d-inline-block">
+        Budget Zone | Low Prices for YOU!
+      </h4>
+      <a href="#" class="text-primary text-decoration-none">Shop now</a>
+      <div id="carouselExample" class="carousel slide mx-5">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex">
+              <img
+                src="./images/budget/1.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/2.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/3.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/4.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/5.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex">
+              <img
+                src="./images/budget/6.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/7.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/8.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/9.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+              <img
+                src="./images/budget/10.jpg"
+                class="col"
+                alt="..."
+                width="20%"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- * Deals Carsoul -->
+
+    <div class="container border my-4">
+      <h4 class="card-title my-3 mx-3 d-inline-block">Deals Under 250 EGP</h4>
+      <a href="#" class="text-primary text-decoration-none">See all deals</a>
+      <div id="carouselExample2" class="carousel carousel-dark slide mx-5 mb-4">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="d-flex justify-content-between">
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/1.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    46% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP206.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP378.25</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Xiaomi Mi In-Ear Earphones Basic
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/2.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    36% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP199.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP310.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">G-Power GP310</p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/3.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    10% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP161.10</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP179.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    QSHOP® Master Your Cardio Premium
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/4.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    6% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP320.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP340.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Acoustic Motion Foam Panels-Sound Proof
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-between">
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/5.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    50% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP180.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP360.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Men Classic Shirt from White Eagle
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/6.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    40% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP120.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP200.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Latteria 3 jars of sahlab, 250 grams each (1 plain + 1
+                    cinnamon + 1 chocolate)
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/7.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    29% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP250.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP350.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Dice Mens Set of 5 Lycra Plain Socket Socks (pack of 5)
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/8.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    18% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP329.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP400.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Testa Toro Medical Foam Core Shoe - Leather & Microfiber
+                    Fabric - Heel Support Foam - Testa Toro
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="d-flex justify-content-between">
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/9.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    31% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP69.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP99.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Dice Mens Set of 3 Plain Lycra Sockets Socks (pack of 3)
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/10.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    23% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP199.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP259.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Fstop Labs Sonic Acoustics 1" X 12" X 12" Acoustic Foam
+                    Panels, Studio Wedge Tiles
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/11.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    14% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP166.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP192.38</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Wireless Mouse W10
+                  </p>
+                </div>
+              </div>
+              <div class="card" style="width: 24%; height: 80%">
+                <div class="square-image border">
+                  <img
+                    src="./images/deals/12.jpg"
+                    class="img-fluid"
+                    alt="Product Image"
+                  />
+                </div>
+                <div class="card-body">
+                  <div
+                    class="text-bg-danger d-inline-block p-1 border rounded fw-bold"
+                  >
+                    10% off
+                  </div>
+                  <span class="text-danger fw-bold">Limited time deal</span>
+                  <br />
+                  <h5 class="d-inline-block">EGP120.00</h5>
+                  <div class="d-inline-block">
+                    List:<span class="text-decoration-line-through"
+                      >EGP134.00</span
+                    >
+                  </div>
+                  <br />
+                  <p class="m-0 overflow-hidden text-nowrap">
+                    Dettol cool anti-bacterial bathing soap bar for effective
+                    germ protection, personal hygiene & odour protection , mint
+                    & bergamot fragrance, 4 pieces 165g @20%
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExample2"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExample2"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- * Products Cards -->
+
+    <h3 class="my-3 container">Top Products</h3>
+    <div class="container d-flex justify-content-around flex-wrap gap-2">
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/1.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            LIGE high quality Men's Luxury belt Fashion quartz watch Men's Rome
+            Business Student Sport waterproof glow-in-the-dark clock
+          </p>
+          <h5 class="card-title">EGP<span class="fw-bold h3"> 234</span>.98</h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.7<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto">
+              <i class="bi bi-cart"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/2.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            1Pcs Transparent Computer Glasses Frame Women Men Anti Blue Light
+            Square Eyewear Blocking Glasses Optical Spectacle Eyeglass
+          </p>
+          <h5 class="card-title">EGP<span class="fw-bold h3"> 90</span>.20</h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.3<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/3.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Gildan 2000 Men's Red Short Sleeve Cotton T-shirt | Classic Fit
+          </p>
+          <h5 class="card-title">EGP<span class="fw-bold h3"> 126</span>.30</h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.4<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/4.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Samsung Galaxy A55 5G, Android Smartphone, Dual SIM Mobile Phone,
+            8GB RAM, 128GB Storage, Awesome Navy -1 Year Warranty/Local Version
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 22,499</span>.00
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.8<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/5.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            soundcore by Anker Liberty 4 NC Wireless, 98.5% Noise Reduction,
+            Adaptive Noise Cancelling to Ears 50H Battery, Wireless Charging,
+            Bluetooth 5.3+ 18 Months Local Warranty - Black
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 2,767</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.0<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/6.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            adidas Lite Racer 4.0 mens Shoes
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 2,694</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.5<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/7.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Xiaomi Redmi Smart Watch 3 Active: 1.83" Big LCD, 5ATM Water
+            Resistant, 12-Day Battery, GPS, 100+ Workout Modes, Heart Rate &
+            Fitness Tracking
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 1,749</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.1<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/8.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Samsung 50 Inch 4K UHD Smart LED TV - Black - UA50DU7000UXEG [2024
+            Model]
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 16,999</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              3.8<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/9.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            American Tourister Sky Park luggage
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 5,574</span>.37
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.4<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/10.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Xiaomi Mi Electric Scooter 4 Lite 2nd Gen: Streamlined Design, 100kg
+            Max Load, 10" Large Tires for Shock Absorption
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 16,666</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.1<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/11.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Strongest Chin Up Bar for Doorway or Wall Multiple Sizes Pull Up Bar
+            for Upper Body Workout
+          </p>
+          <h5 class="card-title">EGP<span class="fw-bold h3"> 350</span>.98</h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.6 <i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/12.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Xiaomi Mi Power Bank 50W 20000mAh: High Capacity Portable Battery,
+            Bi-Directional Fast Charging, 74Wh Output
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 1,999</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              4.2<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/13.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Acer Aspire 7|Core i5-1240P|512GB PCIe NVMe SSD|8GB RAM DDR4
+            3200Mhz|NVIDIA RTX 3050 VRAM GDDR6 4GB|15.6" FHD IPS 60Hz
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 26,999</span>.98
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              3.7<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/14.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Toshiba - Refrigerator - Origin Inverter Motor 535 Liter - Stainless
+            Look - GR-RT702WE-PMN(02)
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 33,999</span>.00
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              3.6<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+      <div class="card border-0 my-3 col-4 col-md-3 col-lg-2">
+        <div class="square-image">
+          <img
+            src="./images/products/15.jpg"
+            class="border rounded-4"
+            alt="..."
+          />
+        </div>
+        <div class="card-body">
+          <p class="card-title text-nowrap overflow-hidden">
+            Quattro Manager Medical Office Chair - Black Mesh
+          </p>
+          <h5 class="card-title">
+            EGP<span class="fw-bold h3"> 1310</span>.00
+          </h5>
+          <div class="d-flex">
+            <p class="fw-bold h5 my-auto">
+              3.1<i class="bi bi-star-fill text-warning"></i>
+            </p>
+            <a href="#" class="btn btn-outline-primary ms-auto"
+              ><i class="bi bi-cart"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- * Footer -->
+
+    <div class="container">
+      <footer class="py-5 border-top">
+        <div class="row d-flex justify-content-around gap-1">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Get to Know Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  About Amazon
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Careers
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Amazon Science
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Shop with Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Your Account
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Your Orders
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Your Addresses
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Your Lists
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Make Money with Us</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Protect and build your brand
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Advertise Your Products
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Sell on Amazon
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Fulfillment by Amazon
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Supply to Amazon
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Let Us Help You</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">Help</a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Shipping & Delivery
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Returns & Replacements
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Recalls and Product Safety Alerts
+                </a>
+              </li>
+              <li class="nav-item mb-2">
+                <a href="#" class="nav-link p-0 text-body-secondary">
+                  Amazon App Download
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="d-flex flex-column flex-sm-row justify-content-center align-items-center gap-4 py-4 my-4 border-top"
+        >
+          <i class="bi bi-amazon h2"></i>
+          <div class="dropdown">
+            <button
+              class="btn btn-outline-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i class="bi bi-translate"></i>
+              English
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item bg-secondary active" href="#"
+                  >English</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Arabic</a></li>
+            </ul>
+          </div>
+          <button
+            type="button"
+            class="btn btn-outline-secondary"
+            style="height: 38px"
+          >
+            <i class="bi bi-flag-fill"></i>Egypt
+          </button>
+        </div>
+        <div class="d-flex justify-content-center">
+          <p>©1996–2025, Amazon.com, Inc. or its affiliates</p>
+        </div>
+      </footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
