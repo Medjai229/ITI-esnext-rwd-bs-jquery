@@ -1,0 +1,86 @@
+#page {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* * side bar Styling */
+
+#navBar {
+  flex-shrink: 0;
+  background-color: rgb(193, 200, 206);
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 7vh;
+}
+
+#logo {
+  margin: 0;
+  margin-left: 15px;
+  height: 40px;
+  width: 40px;
+}
+
+#navLinks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#navLinks a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-decoration: none;
+}
+
+#navLinks a i {
+  margin-left: 10px;
+}
+
+#logOut {
+  margin: 0;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* * Home page styling */
+
+#homePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainImg #imgDiv {
+  background-image: url('./images/smallMainImg.jpg');
+  margin: 15px;
+  width: 90%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+#mainImg p {
+  width: 90%;
+  font-size: 15px;
+}
+
+#searchSec label,
+#searchSec input {
+  margin: 10px;
+}
+
+#recipes .recipe img {
+  width: 100%;
+}

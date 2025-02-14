@@ -1,0 +1,70 @@
+/* * Logo Styling */
+#header #logo #name {
+  display: none;
+}
+
+#header #navBar {
+  display: none;
+}
+
+/* * Banner  */
+#banner {
+  height: 10%;
+}
+
+/* * Slogan */
+#slogan {
+  font-size: 2rem;
+}
+
+/* * Description */
+#desc {
+  font-size: 1rem;
+}
+
+/* * Cards */
+#cards {
+  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#cards .card {
+  width: 90%;
+  margin-top: 10px;
+}
+
+#cards .card .head {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+#cards .card i {
+  font-size: 3rem;
+}
+
+#cards .card .desc {
+  font-size: 1.1rem;
+  margin: auto 5px;
+}
+
+/* * Blogs and Skills */
+
+#blogsnSkills {
+  flex-direction: column;
+}
+
+.blogsnSkills {
+  width: 85%;
+  margin-bottom: 10px;
+}
+
+/* * Footer */
+
+.contact {
+  display: none;
+}
+
+.photo {
+  display: none;
+}

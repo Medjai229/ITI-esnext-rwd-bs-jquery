@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="cvStyle.css" />
+    <link
+      rel="stylesheet"
+      href="cvTablet.css"
+      media="screen and (min-width: 600px) and (max-width: 1000px)"
+    />
+    <link
+      rel="stylesheet"
+      href="cvMobile.css"
+      media="screen and (min-width: 300px) and (max-width: 600px)"
+    />
+  </head>
+  <body>
+    <!-- * Header -->
+    <div id="header" class="row">
+      <!-- * Logo -->
+      <div id="logo" class="col-3">
+        <img src="./images/CV_logo.png" alt="" width="100px" height="100px" />
+        <div id="name" class="col-11">Malik Hussein</div>
+      </div>
+      <!-- * nav bar -->
+      <div id="navBar" class="col-6">
+        <div id="home" class="col-4 navLinks">HOME</div>
+        <div id="about" class="col-4 navLinks">ABOUT</div>
+        <div id="projects" class="col-4 navLinks">PROJECTS</div>
+        <div id="contact" class="col-4 navLinks">CONTACT</div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <!-- * Banner -->
+    <div class="row">
+      <!-- <div id="banner" class="col-16"> -->
+      <picture id="banner" class="col-16">
+        <source media="(max-width: 600px)" srcset="./images/cvBanner300.png" />
+        <source media="(max-width: 1000px)" srcset="./images/cvBanner600.png" />
+        <img src="./images/cvBanner.jpg" alt="" width="100%" height="300px" />
+      </picture>
+      <!-- <div id="job" class="col-8">Software Engineer</div> -->
+      <!-- </div> -->
+    </div>
+    <br />
+    <br />
+    <!-- * Slogan -->
+    <div class="row">
+      <div id="slogan" class="col-10">Do more by doing less!</div>
+    </div>
+    <!-- * Description -->
+    <div class="row">
+      <div id="desc" class="col-10">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+        impedit ducimus sunt accusantium incidunt molestiae voluptatibus ipsum
+        vitae fugit doloribus reiciendis minus aperiam repellendus cupiditate
+        adipisci dolor similique nobis, veritatis laboriosam excepturi qui
+        consequuntur dicta temporibus voluptas. Voluptates possimus, ipsum
+        autem, ipsam sed quam ad, deserunt voluptas beatae incidunt fugiat?
+      </div>
+    </div>
+    <!-- * Cards -->
+    <div class="row">
+      <div id="cards" class="col-10">
+        <div class="card col-4">
+          <div class="head">Website Maintenance</div>
+          <i class="fa-solid fa-gears"></i>
+          <div class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="head">Design Websites</div>
+          <i class="fa-solid fa-pen-nib"></i>
+          <div class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse
+          </div>
+        </div>
+        <div class="card col-4">
+          <div class="head">Business Meeting</div>
+          <i class="fa-solid fa-briefcase"></i>
+          <div class="desc">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea esse
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- * Blog and Skills -->
+    <div class="row">
+      <div id="blogsnSkills" class="col-10">
+        <div id="blog" class="col-8 blogsnSkills">
+          <h2>From my blog</h2>
+          <div class="blogs col-12"></div>
+          <div class="blogs col-12"></div>
+          <button class="col-6">My Blog</button>
+        </div>
+        <div id="skills" class="col-8 blogsnSkills">
+          <h2>My Skills</h2>
+          <div class="skills col-16">
+            <p class="col-10">HTML & CSS</p>
+            <progress class="col-15" value="80" max="100"></progress>
+            <p class="col-10">JS</p>
+            <progress class="col-15" value="85" max="100"></progress>
+            <p class="col-10">Bootstrap</p>
+            <progress class="col-15" value="50" max="100"></progress>
+            <p class="col-10">React</p>
+            <progress class="col-15" value="1" max="100"></progress>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- * Footer -->
+    <div class="footer">
+      <div class="row">
+        <div class="col-12 info">
+          <h2>About Me</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum rem
+            natus placeat hic possimus maiores nesciunt laboriosam fugiat
+            corporis quam sed, voluptatem quasi officiis? Dolores illo
+            repudiandae voluptatibus quia perspiciatis.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3 photo">
+          <div>photo</div>
+        </div>
+        <div class="col-9 contact">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non pariatur
+          ducimus ipsa reiciendis tenetur aut commodi aliquam, quaerat est culpa
+          corrupti porro error laboriosam impedit, iure quos voluptatem et
+          soluta?
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/01718b7dd7.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

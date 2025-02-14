@@ -1,0 +1,226 @@
+/* * Golbal Styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* * Header Styling */
+#header {
+  justify-content: space-around;
+}
+
+/* * Logo Styling */
+#logo {
+  align-items: center;
+}
+
+#intials {
+  font-size: 3rem;
+  justify-content: center;
+  border: 1px black solid;
+  border-radius: 80px;
+  padding: 2% 0;
+}
+
+#name {
+  font-size: 2rem;
+  justify-content: center;
+}
+
+/* * Nav Bar Styling */
+.navLinks {
+  font-size: 1.6rem;
+  justify-content: center;
+  align-items: center;
+}
+
+/* * Banner  */
+#banner {
+  justify-content: center;
+  align-items: center;
+  background-color: beige;
+  height: 30vh;
+}
+
+/* * Slogan */
+#slogan {
+  font-size: 3.5rem;
+}
+
+/* * Description */
+#desc {
+  font-size: 1.2rem;
+}
+
+/* * Cards */
+#cards {
+  margin-top: 3vh;
+  justify-content: space-between;
+}
+
+#cards .card {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 20vh;
+  border: 1px grey solid;
+  box-sizing: border-box;
+}
+
+#cards .card .head {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+#cards .card i {
+  font-size: 3rem;
+}
+
+#cards .card .desc {
+  font-size: 1.1rem;
+  margin: auto 5px;
+}
+
+/* * Blog  and Skills */
+
+.blogsnSkills {
+  padding-left: 10px;
+  border: 1px solid lightgray;
+  flex-direction: column;
+}
+
+#blog h2 {
+  font-size: 2rem;
+}
+#blog button {
+  margin: 10px auto;
+  font-size: 1rem;
+  justify-content: center;
+}
+
+.blogs {
+  margin-top: 1vh;
+  height: 10vh;
+  background-color: rgb(138, 132, 123);
+}
+
+#skills h2 {
+  font-size: 2rem;
+}
+
+#skills p {
+  font-size: 1.2rem;
+}
+
+#skills progress {
+  height: 20px;
+}
+
+.skills {
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+/* * Footer styling  */
+.footer {
+  background-color: bisque;
+  justify-content: center;
+}
+
+.info {
+  flex-direction: column;
+  align-items: center;
+}
+
+.info h2 {
+  font-size: 2rem;
+}
+
+.info p {
+  font-size: 1.2rem;
+}
+
+.photo {
+  align-items: center;
+  justify-content: center;
+}
+
+.photo div {
+  background-color: aqua;
+  height: 60px;
+  width: 60px;
+  border-radius: 60px;
+}
+
+/* * Grid system */
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+}
+
+.col-1 {
+  display: flex;
+  width: 6.25%;
+}
+.col-2 {
+  display: flex;
+  width: 12.5%;
+}
+.col-3 {
+  display: flex;
+  width: 18.75%;
+}
+.col-4 {
+  display: flex;
+  width: 25%;
+}
+.col-5 {
+  display: flex;
+  width: 31.25%;
+}
+.col-6 {
+  display: flex;
+  width: 37.5%;
+}
+.col-7 {
+  display: flex;
+  width: 43.75%;
+}
+.col-8 {
+  display: flex;
+  width: 50%;
+}
+.col-9 {
+  display: flex;
+  width: 56.25%;
+}
+.col-10 {
+  display: flex;
+  width: 62.5%;
+}
+.col-11 {
+  display: flex;
+  width: 68.75%;
+}
+.col-12 {
+  display: flex;
+  width: 75%;
+}
+.col-13 {
+  display: flex;
+  width: 81.25%;
+}
+.col-14 {
+  display: flex;
+  width: 87.5%;
+}
+.col-15 {
+  display: flex;
+  width: 93.75%;
+}
+.col-16 {
+  display: flex;
+  width: 100%;
+}

@@ -1,0 +1,82 @@
+#page {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* * side bar Styling */
+
+#navBar {
+  flex-shrink: 0;
+  background-color: rgb(193, 200, 206);
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
+}
+
+#logo {
+  margin: 0;
+  height: 45px;
+  width: 45px;
+}
+
+#navLinks {
+  display: none;
+}
+
+#logOut {
+  display: none;
+}
+
+/* * Home page styling */
+
+#homePage {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+#mainImg #imgDiv {
+  background-image: url('./images/smallMainImg.jpg');
+  margin: 15px;
+  width: 90%;
+  height: 150px;
+  background-size: cover;
+  background-position: center;
+}
+
+#mainImg p {
+  display: none;
+}
+
+#searchSec p {
+  display: none;
+}
+
+#recipes {
+  margin-top: 20px;
+  justify-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#recipes .recipe {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#recipes .recipe img {
+  width: 100%;
+}
+
+#recipes .recipe p {
+  font-size: 12px;
+}

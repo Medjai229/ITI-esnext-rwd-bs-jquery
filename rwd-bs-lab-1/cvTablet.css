@@ -1,0 +1,50 @@
+/* * Logo Styling */
+
+#name {
+  font-size: 1.6rem;
+}
+
+/* * Nav Bar Styling */
+#header #navBar {
+  display: none;
+}
+
+/* * Banner  */
+#banner {
+  height: 10%;
+}
+
+/* * Slogan */
+#slogan {
+  font-size: 2.5rem;
+}
+
+/* * Description */
+#desc {
+  font-size: 1.1rem;
+}
+
+/* * Cards */
+#cards {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#cards .card {
+  width: 40%;
+  margin-top: 10px;
+}
+
+#cards .card .head {
+  margin: 5px 0;
+  font-size: 1.5rem;
+}
+
+#cards .card i {
+  font-size: 3rem;
+}
+
+#cards .card .desc {
+  font-size: 1.1rem;
+  margin: auto 5px;
+}
